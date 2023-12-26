@@ -1,16 +1,18 @@
 import cv2
 
-def change_contrast(frame, alpha=1.0, beta=0):
+
+def change_contrast(frame_, alpha=1.0, beta=0):
     """
     Adjust the contrast of a frame.
 
-    :param frame: Input frame (image)
+    :param frame_: Input frame (image)
     :param alpha: Contrast control (1.0 means no change)
     :param beta: Brightness control
     :return: Frame with adjusted contrast
     """
-    adjusted_frame = cv2.convertScaleAbs(frame, alpha=alpha, beta=beta)
-    return adjusted_frame
+    adjusted_frame_ = cv2.convertScaleAbs(frame_, alpha=alpha, beta=beta)
+    return adjusted_frame_
+
 
 # Open a video capture object
 cap = cv2.VideoCapture(
